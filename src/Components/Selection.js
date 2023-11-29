@@ -1,52 +1,36 @@
-
-
-const options = [
-    {
-        id:1,
-        title:"Movies",
-
-    },
-    {
-        id:2,
-        title:"Books",
-
-    },
-    {
-        id:3,
-        title:"Spells",
-
-    },
-    {
-        id:4,
-        title:"Character",
-
-    }
-]
+import { Link } from "react-router-dom";
 
 
 function Selection() {
 
-    function clickHandler(event){
-        
-    }
 
-    return ( 
-        <div className="flex justify-evenly items-center">
-        {
-            options.map((option)=>{
-                return (
-                  <div
-                    className="flex flex-col justify-center items-center w-40 h-40 bg-black opacity-70 rounded-lg"
-                    onClick={clickHandler}
-                    key={option.id}
-                  >
-                    <h1 className="text-3xl">{option.title}</h1>
-                  </div>
-                );
-            })
-        }
-        </div>
-     );
+    return (
+      <div className="flex justify-evenly items-center">
+        <Link to="/films">
+          <div className="bg-black rounded-lg w-44 h-44 opacity-80 flex flex-col justify-center items-center">
+            <h1 className="text-3xl text-white">Movies</h1>
+          </div>
+        </Link>
+
+        <Link to="/books">
+          <div className="bg-black rounded-lg w-44 h-44 opacity-80 flex flex-col justify-center items-center">
+            <h1 className="text-3xl text-white">Books</h1>
+          </div>
+        </Link>
+
+        <Link to="/spells">
+          <div className="bg-black rounded-lg w-44 h-44 opacity-80 flex flex-col justify-center items-center">
+            <h1 className="text-3xl text-white">Spells</h1>
+          </div>
+        </Link>
+
+        <Link to="/character">
+          <div className="bg-black rounded-lg w-44 h-44 opacity-80 flex flex-col justify-center items-center">
+            <h1 className="text-3xl text-white">Characters</h1>
+          </div>
+        </Link>
+      </div>
+    );
 }
 
 export default Selection;
