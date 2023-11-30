@@ -24,11 +24,6 @@ function Selection() {
           </div>
         </Link>
 
-        <Link to="/character">
-          <div className="bg-black rounded-lg w-44 h-44 opacity-80 flex flex-col justify-center items-center">
-            <h1 className="text-3xl text-white">Characters</h1>
-          </div>
-        </Link>
       </div>
     );
 }

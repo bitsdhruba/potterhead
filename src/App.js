@@ -6,7 +6,6 @@ import About from './pages/About';
 import Films from './pages/Films';
 import Books from './pages/Books';
 import Spells from './pages/Spells';
-import Character from './pages/Character';
 
 
 
@@ -20,7 +19,6 @@ function App() {
         <Route path="/films" element={<Films />} />
         <Route path="/books" element={<Books />} />
         <Route path="/spells" element={<Spells />} />
-        <Route path="/character" element={<Character />} />
       </Routes>
     </div>
   );

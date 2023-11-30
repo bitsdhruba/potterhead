@@ -2,20 +2,25 @@ import { useEffect, useState } from "react";
 import Selection from "../Components/Selection";
 import axios from "axios";
 import Card from "../Components/Card";
+import Loader from "../Components/Loader";
 
 
 function Films() {
   
+  const [loader, setLoader] = useState(false);
+
   const [filmData , setFilmData] = useState([]);
 
   async function fetchData(){
       
+    setLoader(true)
     const url = 'https://api.potterdb.com/v1/movies';
     const {data} = await axios.get(url);
     const collections = data.data;
     
     setFilmData(collections);
 
+    setLoader(false);
   }
   
   useEffect( ()=>{
@@ -25,21 +30,10 @@ function Films() {
 
   
   return (
-    <div >
+    <div>
       <Selection />
-      <div >
-        {filmData.map((item) => {
-          
-          const poster = item.attributes.poster;
-          const title = item.attributes.title;
-          const trailer = item.attributes.trailer;
-          const release_date = item.attributes.release_date;
-          const summary = item.attributes.summary;
-
-          return (
-            <Card poster={poster} title={title} trailer={trailer} release_date={release_date} summary={summary}/>
-          );
-        })}
+      <div className="w-full h-full">
+        {loader ? <Loader /> : <Card filmData={filmData} />}
       </div>
     </div>
   );
