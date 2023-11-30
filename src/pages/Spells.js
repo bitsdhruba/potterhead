@@ -32,9 +32,9 @@ function Spells() {
 
   
   return (
-    <div className="w-screen h-screen">
+    <div>
       <Selection />
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="w-full h-full ">
         {loader ? <Loader /> : <SpellCard spellList={spellList} />}
       </div>
     </div>
