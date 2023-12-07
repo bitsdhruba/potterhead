@@ -70,3 +70,9 @@ code {
       transform: rotateY(-180deg);
    }
 }
+
+
+.active{
+   border: solid 2px rgb(82, 77, 112);
+   background-color: rgba(52, 68, 83, 0.815);
+}

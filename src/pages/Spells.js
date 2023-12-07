@@ -41,4 +41,4 @@ function Spells() {
   );
 }
 
-export default Spells;
+export default Spells; 

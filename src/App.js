@@ -11,7 +11,7 @@ import Spells from './pages/Spells';
 
 function App() {
   return (
-    <div className="App bg-[url('./assets/harry-potter-bg.jpg')] bg-cover bg-fixed text-white">
+    <div className="App bg-[url('./assets/harry-potter-bg.jpg')] bg-cover bg-fixed text-white min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

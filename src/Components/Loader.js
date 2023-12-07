@@ -1,6 +1,6 @@
 function Loader() {
     return (
-      <div>
+      <div className="flex justify-center items-center min-h-screen">
         <div class="spinner">
             <div></div>
             <div></div>
